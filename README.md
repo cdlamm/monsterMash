@@ -49,7 +49,7 @@ Sound Effect Credits:
 		http://www.bensound.com/royalty-free-music/track/tomorrow
 	
 
-HOW TO PLAY:
+How To Play:
 	Mouse Click to Shoot Snowballs 
 	Use the W & S/ Up & Down Keys to move the boy up and down
 	Eliminate 5 terribly scary monsters to win
