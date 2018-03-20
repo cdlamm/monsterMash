@@ -25,23 +25,24 @@ EXTRA FEATURES IMPLEMENTED:
 	to thrawt the terrible evil tyrant and his terribly scary monsters and take back all the stolen memories! 
 		
 Cassidy Lamm's Contributions:
-	1) Created/coded the background, chunk, enemy, and exp .h and .cpp files. 
+
+	1. Created/coded the background, chunk, enemy, and exp .h and .cpp files. 
 		Also modified the boy, ghost, pixie, and rememberance .h and .cpp files.
-	2) Implemented Parallax Scrolling
-	3) Implemented the Painter's Algorithm
+	2. Implemented Parallax Scrolling
+	3. Implemented the Painter's Algorithm
 		-The ghosts in the background are smaller than those in the foreground
 		-The monster kills foreground ghosts upon collision, but not background ghosts
-	4) Incorporated Key Control
-	5) Incorporated Chunks Explosions w/ Object Pooling
-	6) Incorporated the Object Pooling FreeList & ShowList Count Labels
-	7) Created the Snowball Art Asset 
+	4. Incorporated Key Control
+	5. Incorporated Chunks Explosions w/ Object Pooling
+	6. Incorporated the Object Pooling FreeList & ShowList Count Labels
+	7. Created the Snowball Art Asset 
+	
 
+Dance Party Background Credit:
+	https://www.youtube.com/watch?v=VRpdoDuMHgE
+	https://i.ytimg.com/vi/VRpdoDuMHgE/maxresdefault.jpg
 
-	Dance Party Background Credit:
-		https://www.youtube.com/watch?v=VRpdoDuMHgE
-		https://i.ytimg.com/vi/VRpdoDuMHgE/maxresdefault.jpg
-
-	Sound Effect Credits:
+Sound Effect Credits:
 	"Snow on Cement" by Julien Matthey
 		https://www.freesound.org/people/Julien%20Matthey/sounds/167080/
 	"Tomorrow" by Royalty Free Music from Bensound
