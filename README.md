@@ -1,4 +1,5 @@
 Name: Sarah Martin & Cassidy Lamm
+
 Project completed: 04/19/2016 
 
 Project description: Project 5 is to implement a more complete 2D game prototype
@@ -12,9 +13,10 @@ Project description: Project 5 is to implement a more complete 2D game prototype
 	6. Have a coherent story or theme
 	7. Maintain previous specs
 	
-EXTRA FEATURES IMPLEMENTED:
-	Explosions w/ Chunks
-	Object Pooling for Explosions		
+Extra Features Implemented:
+
+	1. Explosions w/ Chunks
+	2. Object Pooling for Explosions		
 
 	Short Story:
     Once upon a time, there was a BOY who lived in the village of Freeport which was attacked by 
