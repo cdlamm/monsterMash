@@ -17,12 +17,12 @@ EXTRA FEATURES IMPLEMENTED:
 	Object Pooling for Explosions		
 
 	Short Story:
-    Once upon a time, there was a BOY who lived in the village of FREEPORT which was attacked by 
-    a TERRIBLE EVIL TYRANT(totally official name) who stole the memories of sleeping children in 
-    the middle of the night to fuel his TERRIBLY SCARY MONSTERS (also official) and take over 
-    the world! But the TERRIBLE EVIL TYRANT made a grave mistake, he stole the memories of the 
-    BOY'S LITTLEST BROTHER. Now the BOY is on a mission, with the help of FRIENDLY GHOSTS,
-	to thrawt the TERRIBLE EVIL TYRANT and his TERRIBLY SCARY MONSTERS and take back all the stolen memories! 
+    Once upon a time, there was a BOY who lived in the village of Freeport which was attacked by 
+    a terrible evil tyrant who stole the memories of sleeping children in 
+    the middle of the night to fuel his terribly scary monsters and take over 
+    the world! But the terrible evil tyrant made a grave mistake, he stole the memories of the 
+    boy's little brother. Now the boy is on a mission, with the help of friendly ghosts,
+	to thrawt the terrible evil tyrant and his terribly scary monsters and take back all the stolen memories! 
 		
 Cassidy Lamm's Contributions:
 	1) Created/coded the background, chunk, enemy, and exp .h and .cpp files. 
