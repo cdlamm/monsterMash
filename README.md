@@ -1,7 +1,4 @@
 Name: Sarah Martin & Cassidy Lamm
-Clemson Email Address: 
-slm3@g.clemson.edu
-clamm@g.clemson.edu
 
 Project no: 5
 Project due date: 04/19/2016 
