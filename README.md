@@ -52,12 +52,9 @@ Sound Effect Credits:
 	
 
 How To Play:
-	Mouse Click to Shoot Snowballs 
-	
-	Use the W & S/ Up & Down Keys to move the boy up and down
-	
-	Eliminate 5 terribly scary monsters to win
-	
-	Don't Let the Monters Reach the boy
-	
-	If the Monster explodes too close to the boy, the flying chunks will kill him
+
+	-Mouse Click to Shoot Snowballs 
+	-Use the W & S/ Up & Down Keys to move the boy up and down
+	-Eliminate 5 terribly scary monsters to win
+	-Don't Let the Monters Reach the boy
+	-If the Monster explodes too close to the boy, the flying chunks will kill him
