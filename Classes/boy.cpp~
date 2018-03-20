@@ -1,0 +1,112 @@
+#include <iostream>
+#include <cmath>
+#include "boy.h"
+#include "SimpleAudioEngine.h"
+
+Boy::Boy():
+	velocity(0, 0),
+	viewSize(cocos2d::Director::getInstance()->getVisibleSize()),
+	sprite(NULL),
+	cache(cocos2d::SpriteFrameCache::getInstance()),
+	plistName("boySheet.plist"),
+	animName("boy%d.png"),
+	frames(0),
+ 	moveUp(false),
+	moveDown(false)  
+{
+	cache->addSpriteFramesWithFile(getName());
+	frames = Pixie::getAnimation(animName,4,cache);
+	setSprite(frames);
+	frameAnimation = cocos2d::Animation::createWithSpriteFrames(frames, 1.0f/4);
+	sprite->runAction(
+    	cocos2d::RepeatForever::create(cocos2d::Animate::create(getAnimFrames()))
+  		);	
+	sprite->setPosition(250,200);
+
+	cocos2d::EventListenerKeyboard* l = cocos2d::EventListenerKeyboard::create();
+  	l->onKeyPressed = [this](cocos2d::EventKeyboard::KeyCode keyCode,cocos2d::Event* event) {
+    	switch(keyCode) {
+       		case cocos2d::EventKeyboard::KeyCode::KEY_DOWN_ARROW:
+	    		case cocos2d::EventKeyboard::KeyCode::KEY_S:
+	      		moveDown = true;
+	      		break;
+      		case cocos2d::EventKeyboard::KeyCode::KEY_UP_ARROW:
+	    		case cocos2d::EventKeyboard::KeyCode::KEY_W:
+	      		moveUp = true;
+	      		break;
+	    	default:
+	      		break;
+    	}
+  };
+
+	l->onKeyReleased = [this](cocos2d::EventKeyboard::KeyCode keyCode, cocos2d::Event* event){
+    	switch(keyCode) {
+      		case cocos2d::EventKeyboard::KeyCode::KEY_DOWN_ARROW:
+	    		case cocos2d::EventKeyboard::KeyCode::KEY_S:
+	      		moveDown = false;
+	     		break;
+      	case cocos2d::EventKeyboard::KeyCode::KEY_UP_ARROW:
+	    	case cocos2d::EventKeyboard::KeyCode::KEY_W:
+	     		moveUp = false;
+	      		break;
+	   	default:
+	      		break;
+    	}
+  };
+
+  cocos2d::Director::getInstance()->getEventDispatcher()-> addEventListenerWithFixedPriority(l, 1);
+}
+
+
+void Boy::setSprite(cocos2d::Vector<cocos2d::SpriteFrame*> spframes)
+{
+	sprite = cocos2d::Sprite::createWithSpriteFrame(spframes.front());
+	boyWidth = sprite->getContentSize().width; 
+	boyHeight = sprite->getContentSize().height;
+}
+
+void Boy::update(float dt)
+{
+
+	cocos2d::Point location = sprite->getPosition();
+	if(moveDown && !moveUp) {
+	  if(location.y > boyHeight/2){
+		if(velocity.y == 0){
+			velocity.y = -velocityInc;
+		}
+		else{
+			velocity.y = -abs(velocity.y);
+		}
+  	  }
+	  else{
+		velocity.y = 0;
+	  }
+	}
+  	if(moveUp && !moveDown) {
+	  if(location.y < MAX){
+		if(velocity.y == 0){
+			velocity.y = velocityInc;
+		}
+		else{
+			velocity.y = abs(velocity.y);
+		}
+	  }
+	  else{
+		velocity.y = 0;
+	  }
+  	}
+	if(!moveUp && !moveDown) {
+		velocity.y = 0;
+	}	
+	cocos2d::Vec2 position = sprite->getPosition();
+	cocos2d::Vec2 incr = velocity * dt;
+	sprite->setPosition(position.x + incr.x, position.y + incr.y);
+
+
+	// if ( location.y > MAX - boyWidth/2 ) {
+    	//	velocity.y = -abs(velocity.y);
+  	//}
+  	//if ( location.y < boyWidth/2 ) {
+    	//	velocity.y = abs(velocity.y);
+  	//}
+}

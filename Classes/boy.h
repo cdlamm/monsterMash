@@ -1,0 +1,40 @@
+#ifndef __BOY_H__
+#define __BOY_H__
+
+#include "cocos2d.h"
+#include "pixie.h"
+#include <string>
+
+class Boy : public Pixie
+{
+public:
+	Boy();
+	~Boy(){}
+   	
+	void update(float dt);
+	cocos2d::Vector<cocos2d::SpriteFrame*> getFrames() const {return frames;}
+
+	cocos2d::SpriteFrameCache* getFrameCache() const {return cache;}
+	const char* getName() const {return plistName;}
+	const char* getAnimName() const {return animName;}
+	cocos2d::Sprite* getSprite() const {return sprite;}
+	void setSprite(cocos2d::Vector<cocos2d::SpriteFrame*> const spframes);
+	cocos2d::Animation* getAnimFrames() const {return frameAnimation;}
+private:
+	cocos2d::Vec2 velocity;
+	cocos2d::Size viewSize;
+	cocos2d::Sprite* sprite;
+	cocos2d::SpriteFrameCache* cache;
+	const char * plistName;
+	const char * animName;
+	cocos2d::Vector<cocos2d::SpriteFrame*> frames;
+	bool moveUp, moveDown;
+	cocos2d::Animation* frameAnimation;
+
+	int boyWidth;
+	int boyHeight;
+ 	int MAX = 300;
+	int velocityInc = 200;
+};
+
+#endif // __BOY_H__

@@ -1,0 +1,56 @@
+#include "background.h"
+
+Background::Background(int speed) :
+  origin( cocos2d::Director::getInstance()->getVisibleOrigin() ),
+  viewSize( cocos2d::Director::getInstance()->getVisibleSize() ),
+  scrollSpeed(speed)
+{ }
+
+Background* Background::create(const std::string& filename, int speed) {
+    Background *backLayer = new Background(speed);
+    if (backLayer && backLayer->init(filename)) {
+        backLayer->autorelease();
+        return backLayer;
+    }
+    CC_SAFE_DELETE(backLayer);
+    return NULL;
+}
+
+cocos2d::Sprite* Background::stretchFit(cocos2d::Sprite* const sprite) {
+  float xScale = viewSize.width  / sprite->getContentSize().width;
+  float yScale = viewSize.height / sprite->getContentSize().height;
+
+  sprite->setScale(xScale, yScale);
+  return sprite;
+}
+
+
+bool Background::init(const std::string& filename) {
+
+  if ( !Layer::init() ) return false;
+
+  setBackgroundFile( filename );
+
+  bg1 = cocos2d::Sprite::create(backFile);
+  bg1->setPosition(0, viewSize.height/2);
+    
+  bg2 = cocos2d::Sprite::create(backFile);
+  bg2->setPosition(bg1->getContentSize().width - 1,viewSize.height/2);    
+
+  addChild(bg1);   
+  addChild(bg2);
+ 
+  return true;
+}
+
+void Background::update(float dt) {  
+  bg1->setPositionX(bg1->getPositionX()-scrollSpeed);
+  bg2->setPositionX(bg2->getPositionX()-scrollSpeed);
+
+  if (bg1->getPositionX() < -bg1->getContentSize().width/2) {
+    bg1->setPositionX( bg2->getPositionX() + bg2->getContentSize().width);
+  }
+  if (bg2->getPositionX() < -bg2->getContentSize().width/2) {
+    bg2->setPositionX(bg1->getPositionX() + bg1->getContentSize().width);
+  }
+}
