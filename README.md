@@ -1,7 +1,5 @@
 Name: Sarah Martin & Cassidy Lamm
-
-Project no: 5
-Project due date: 04/19/2016 
+Project completed: 04/19/2016 
 
 Project description: Project 5 is to implement a more complete 2D game prototype
 					 with the following attributes:
@@ -18,18 +16,6 @@ EXTRA FEATURES IMPLEMENTED:
 	Explosions w/ Chunks
 	Object Pooling for Explosions		
 
-Sarah Martin's Contribution:
-    1) Created and Drew all Art assets and Animations (except the Power Button, sound effects, 
-		snowball, and DANCE PARTY BACKGROUND)
-    2) Created/coded the bullet .h and .cpp files. 
-		Also modified the ghost, pixie, rememberance, enemy, and appDelegate .h and .cpp files.
-	3) Incorporated sound and music (from creative common & royalty free sites; credits listed below)
-	4) Implemented Shooting
-	5) Implemented Touch (For Shooting)
-	6) Implemented Scoring Mechanim, Label & Win/Lose Conditions
-	7) Randomized Enemy Y Position & Incremented Velocity for Difficulty
-    8)The Following Short Story!
-	
 	Short Story:
     Once upon a time, there was a BOY who lived in the village of FREEPORT which was attacked by 
     a TERRIBLE EVIL TYRANT(totally official name) who stole the memories of sleeping children in 
