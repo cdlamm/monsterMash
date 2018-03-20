@@ -44,14 +44,14 @@ Dance Party Background Credit:
 
 Sound Effect Credits:
 	"Snow on Cement" by Julien Matthey
-		https://www.freesound.org/people/Julien%20Matthey/sounds/167080/
+		https://www.freesound.org/people/Julien%20Matthey/sounds/167080/	
 	"Tomorrow" by Royalty Free Music from Bensound
 		http://www.bensound.com/royalty-free-music/track/tomorrow
 	
 
 HOW TO PLAY:
 	Mouse Click to Shoot Snowballs 
-	Use the W & S/ Up & Down Keys to move the BOY UP and DOWN
-	Eliminate 5 TERRIBLY SCARY MONSTERS to win
-	Don't Let the Monters Reach the BOY
-	If the Monster explodes too close to the BOY, the flying chunks will kill him
+	Use the W & S/ Up & Down Keys to move the boy up and down
+	Eliminate 5 terribly scary monsters to win
+	Don't Let the Monters Reach the boy
+	If the Monster explodes too close to the boy, the flying chunks will kill him
